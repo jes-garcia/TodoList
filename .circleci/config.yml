@@ -28,6 +28,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: TEST
+          command: cawendius
+      - run:
           name: docker-login
           command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - run:
