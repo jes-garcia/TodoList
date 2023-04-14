@@ -32,7 +32,7 @@ jobs:
           command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - run:
           name: build-docker-image
-          command: docker build -t $IMAGE_NAME:latest . --build-arg SECRET_KEY_BASE=123456789
+          command: docker build -t $IMAGE_NAME:latest . --build-arg SECRET_KEY_BASE="TETE"
       - run:
           name: publish-docker-image
           command: docker push $IMAGE_NAME
