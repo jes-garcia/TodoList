@@ -13,5 +13,4 @@ RUN gem install bundler:2.2.3
 RUN bundle install
 RUN rake db:migrate
 RUN rails assets:precompile
-RUN echo "Oh dang look at that $SECRET_KEY_BASE"
 CMD [ "rails", "server"]
