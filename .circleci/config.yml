@@ -31,7 +31,7 @@ jobs:
           name: docker-login
           command: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - run:
-          name: testing-env-changes
+          name: testing-env-changes-2
           command: echo $IMAGE_NAME    
       - run:
           name: build-docker-image
