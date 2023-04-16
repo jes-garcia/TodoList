@@ -1,9 +1,8 @@
 CURRENT_INSTANCE=$(sudo docker ps -a -q --filter ancestor="$IMAGE_NAME" --format="{{.ID}}")
-
 if [ "$CURRENT_INSTANCE" ]
 then
     sudo docker rm $(sudo docker stop $CURRENT_INSTANCE)
-    fi
+fi
 
 sudo docker pull $IMAGE_NAME
 
