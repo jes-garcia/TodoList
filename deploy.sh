@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 CURRENT_INSTANCE=$(sudo docker ps -a -q --filter ancestor="$IMAGE_NAME" --format="{{.ID}}")
 if [ "$CURRENT_INSTANCE" ]
 then
